@@ -1,3 +1,9 @@
+/* File: app.js
+Name: Calum Bashow
+Student ID# 301218933
+Date: 28/09/2002
+*/
+
 let createError = require('http-errors');
 let express = require('express');
 let path = require('path');
@@ -36,7 +42,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('error', { title:'Error'});
 });
 
 module.exports = app;

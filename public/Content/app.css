@@ -1,14 +1,16 @@
-/*
-Custom CSS goes here
+/* File: App.css
+Name: Calum Bashow
+Student ID# 301218933
+Date: 28/09/2002
 */
 
+.container{
+    margin: auto;
+}
 
 body {
    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
-}
 
 

@@ -1,3 +1,9 @@
+/* File: users.js
+Name: Calum Bashow
+Student ID# 301218933
+Date: 28/09/2002
+*/
+
 let express = require('express');
 let router = express.Router();
 

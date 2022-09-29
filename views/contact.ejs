@@ -1,0 +1,77 @@
+<% include  partials/header.ejs %>
+
+<% include  partials/main_nav.ejs %>
+
+<!-- Body section-->
+<center>
+  <main class="container" style="width :800px">
+    <div class="jumbotron">
+
+      <h1 class="display-4"> <img src="/Assets/images/Logo.png" width="125" height="125"> Contact Me</h1>
+      <hr class="my-4">
+      <p class="lead">If you have anything you would like to discuss with me, you can reach me at my emails below or by putting in your information and typing me a message!
+        <br>
+        <br>
+        Email:
+        <br>
+        cbashow@my.centennialcollege.ca
+        <br>
+        calumb@outlook.com
+        <br>
+        <br>
+        Phone:
+        902-809-4463
+        <br>
+        <br>
+      </p>
+      <div class="row g-2">
+        <div class="col-md">
+          <form class="form-floating">
+            <input class="form-control" id="floatingInputValue"  value="">
+            <label for="floatingInputValue">Your First Name</label>
+          </form>
+        </div>
+        <div class="col-md">
+          <div class="form-floating">
+            <form class="form-floating">
+              <input class="form-control" id="floatingInputValue"  value="" >
+              <label for="floatingInputValue">Your Last Name</label>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+          <div class="form-floating">
+            <form class="form-floating">
+              <input type="email" class="form-control" id="inputEmail" placeholder="" value="">
+              <label for="floatingInputValue">Your Email</label>
+            </form>
+          </div>
+      <br>
+      <div class="form-floating">
+        <form class="form-floating">
+          <input class="form-control" id="inputPhone" placeholder="" value="">
+          <label for="floatingInputValue">Your Phone Number (Optional)</label>
+        </form>
+      </div>
+      <br>
+      <div class="form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here" id="inputMessage" style="height: 150px"></textarea>
+        <label for="floatingTextarea2">Your Message</label>
+      </div>
+    </div>
+    <br>
+    <button type="button" class="btn btn-secondary btn-sm">Submit!</button>
+  </main>
+</center>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<% include  partials/bottom_nav.ejs %>
+
+<% include partials/footer.ejs %>
