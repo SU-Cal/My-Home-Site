@@ -23,7 +23,7 @@ let lastName = document.getElementById("inputFirstName").value;
 let phoneNumber = document.getElementById("inputEmail").value;
 let email = document.getElementById("inputPhone").value;
 let message = document.getElementById("inputMessage").value;
-
+console.log(firstName +" " + lastName +", "+ phoneNumber +", "+ email+", " + message)
 //Gives user a chance to deny submitting and returning to home page
 let confirmationText = "Would you like to submit and return to the home page ?"
 
