@@ -19,7 +19,7 @@ Date: 28/09/2002
 //Takes and reads the info of the user
 function InfoSubmit (){
 let firstName =   document.getElementById("inputFirstName").value;
-let lastName = document.getElementById("inputFirstName").value;
+let lastName = document.getElementById("inputLastName").value;
 let phoneNumber = document.getElementById("inputEmail").value;
 let email = document.getElementById("inputPhone").value;
 let message = document.getElementById("inputMessage").value;
