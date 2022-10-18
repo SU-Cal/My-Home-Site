@@ -1,0 +1,38 @@
+<% include  partials/header.ejs %>
+
+<% include  partials/main_nav.ejs %>
+
+
+    <main class="container" style="width :800px">
+        <div class="jumbotron">
+            <h1 class="display-4"> <img src="/Assets/images/Logo.png" width="125" height="125"> <%= title %>%></h1>
+            <br>
+            <table class="table table-bordered.table-striped.table-hover">
+
+                <tr>
+                    <th class = "text-center">Contact Name</th>
+                    <th class = "text-center">Contact Number</th>
+                    <th class = "text-center">Email Address</th>
+                </tr>
+
+                <%for(let count = 0; count < BusinessContactList.length; count++){ %>
+                    <tr>
+                        <script><%= BusinessContactList[count].name %></script>
+                        <td class ="text-center"><%= BusinessContactList[count].name %></td>
+                        <td class ="text-center"><%= BusinessContactList[count].number %></td>
+                        <td class ="text-center"><%= BusinessContactList[count].email %></td>
+                    </tr>
+                <% } %>
+
+            </table>
+
+
+    </div>
+    </main>
+
+
+
+
+<% include  partials/bottom_nav.ejs %>
+
+<% include partials/footer.ejs %>
