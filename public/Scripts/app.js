@@ -16,7 +16,9 @@ Date: 28/09/2002
 
 })();
 
-//Takes and reads the info of the user
+
+
+/*Takes and reads the info of the user
 function InfoSubmit (){
 let firstName =   document.getElementById("inputFirstName").value;
 let lastName = document.getElementById("inputLastName").value;
@@ -32,4 +34,4 @@ if (confirm(confirmationText) == true)
     window.location.href = "/home";
 }
 }
-document.getElementById("submitButton").onclick = InfoSubmit;
+document.getElementById("submitButton").onclick = InfoSubmit; */

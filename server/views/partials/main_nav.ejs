@@ -43,6 +43,14 @@
                 </li>
 
                 <li class="nav-item">
+                    <% if (title == "Business Contacts List") {%>
+                        <a class="nav-link active" href="/business-contacts"> <i class="fas fa-light fa-lg  fa-bell-concierge"></i> Business Contacts List</a>
+                    <%} else { %>
+                        <a class="nav-link" href="/business-contacts"> <i class="fas fa-light fa-lg  fa-bell-concierge"></i> Business Contacts List</a>
+                    <% } %>
+                </li>
+
+                <li class="nav-item">
                     <% if (title == "Contact Me") {%>
                         <a class="nav-link active" href="/contact"> <i class="fas fa-lg  fa-comments"></i> Contact Me</a>
                     <%} else { %>

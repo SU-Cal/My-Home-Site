@@ -10,7 +10,7 @@ Date: 28/09/2002
  * Module dependencies.
  */
 
-let app = require('./config/app');
+let app = require('./server/config/app');
 let debug = require('debug')('untitled:server');
 let http = require('http');
 
