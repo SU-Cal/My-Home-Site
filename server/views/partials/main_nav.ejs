@@ -44,9 +44,9 @@
 
                 <li class="nav-item">
                     <% if (title == "Business Contacts List") {%>
-                        <a class="nav-link active" href="/business-contacts"> <i class="fas fa-light fa-lg  fa-bell-concierge"></i> Business Contacts List</a>
+                        <a class="nav-link active" href="/business-contacts"> <i class="fas fa-light fa-lg fa-address-book "></i> Business Contacts List</a>
                     <%} else { %>
-                        <a class="nav-link" href="/business-contacts"> <i class="fas fa-light fa-lg  fa-bell-concierge"></i> Business Contacts List</a>
+                        <a class="nav-link" href="/business-contacts"> <i class="fas fa-light fa-lg  fa-address-book"></i> Business Contacts List</a>
                     <% } %>
                 </li>
 
@@ -57,6 +57,17 @@
                         <a class="nav-link" href="/contact"> <i class="fas fa-lg  fa-comments"></i> Contact Me</a>
                     <% } %>
                 </li>
+
+               <%if (typeof displayName == 'string' && displayName) { %>
+
+                    <a style="pointer-events: none; text-decoration: none;" class="navbar-text"> <li class="fas fa-lg fa-user"></li>  Hey, <%= displayName %> &nbsp;</a>
+
+                    <a style="text-decoration: none;" href="/logout" class="navbar-text"> <li class="fas fa-lg fa-sign-in-alt"></li>  Logout </a>
+                <%} else{%>
+
+                        <a style="text-decoration: none;" href="/login" class="navbar-text"> <li class="fas fa-lg fa-sign-in-alt"></li>  Login </a>
+
+                <% } %>
 
             </ul>
         </div>

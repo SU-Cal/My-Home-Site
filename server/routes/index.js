@@ -9,10 +9,9 @@ let router = express.Router();
 
 let indexController = require('../controllers/index');
 
-/* GET home page. */
+/* Routes for basic pages. */
 router.get('/', indexController.displayHomePage);
 
-/* GET home page. */
 router.get('/home', indexController.displayHomePage);
 
 router.get('/about', indexController.displayAboutPage);
@@ -23,4 +22,19 @@ router.get('/services', indexController.displayServicesPage);
 
 router.get('/contact', indexController.displayContactPage);
 
+//logon routes
+
+router.get('/login', indexController.displayLoginPage );
+
+router.post('/login', indexController.processLoginPage);
+
+//register routes
+
+router.get('/register', indexController.displayRegisterPage);
+
+router.post('/register', indexController.processRegisterPage);
+
+//logout routes
+
+router.get('/logout', indexController.performLogout);
 module.exports = router;

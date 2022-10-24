@@ -1,7 +1,7 @@
-/* File: App.css
+/* File: App.js
 Name: Calum Bashow
 Student ID# 301218933
-Date: 28/09/2002
+Date: 20/10/2022
 */
 
 //Main Javascript
@@ -10,7 +10,7 @@ Date: 28/09/2002
     function Start()
     {
         console.log("App Started");
-
+        //makes sure user knows they are deleting a button
         let deleteButtons = document.querySelectorAll('.btn-danger')
 
         for(button of deleteButtons)
@@ -28,7 +28,6 @@ Date: 28/09/2002
     window.addEventListener("load", Start);
 
 })();
-
 
 
 /*Takes and reads the info of the user

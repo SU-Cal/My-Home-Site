@@ -1,3 +1,10 @@
+/* File: business_contacts.js
+Name: Calum Bashow
+Student ID# 301218933
+Date: 20/10/2022
+*/
+
+
 let mongoose = require('mongoose');
 
 //create a model class

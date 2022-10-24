@@ -8,23 +8,26 @@
         <h1 class="display-4"><img src="/Assets/images/Logo.png" width="125" height="125"><strong><%= title %>
                 %>
             </strong></h1>
+        <hr class="my-4">
         <br>
         <div class="row g-2">
             <div class="col-md">
                 <form method="POST">
                     <br>
+                    <!--Form for users to edit-->
                     <div class="form-floating">
-                        <textarea type="text"
+                        <textarea
                                   class="form-control"
                                   id="inputFullNameBusiness"
                                   name="name"
+                                  type="text"
                         ><%= contact.name %> </textarea>
                         <label for="inputFullName">Full Name</label>
                     </div>
 
                     <br>
                     <div class="form-floating">
-                        <textarea type="text"
+                        <textarea
                                   class="form-control"
                                   id="inputEmailBusiness"
                                   name="email"
@@ -35,7 +38,7 @@
                     <br>
 
                     <div class="form-floating">
-                        <textarea type="text"
+                        <textarea
                                   class="form-control"
                                   id="inputPhoneBusiness"
                                   name="number"
@@ -47,7 +50,8 @@
                     <br>
                     <button type="submit" id="" class="btn btn-secondary btn-sm">Submit</button>
                     <br>
-                    <button type="button" id="" class="btn btn-secondary btn-sm">Cancel</button>
+                    <br>
+                    <a class="btn btn-secondary btn-sm" href="/business-contacts">Cancel</a>
 
                 </form>
                 <!--  <button href="/business-contacts" id="" class="btn btn-secondary btn-sm">Cancel</button> -->

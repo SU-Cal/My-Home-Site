@@ -1,7 +1,7 @@
-/* File: app.js
+/* File: App.js
 Name: Calum Bashow
 Student ID# 301218933
-Date: 28/09/2002
+Date: 20/10/2022
 */
 
 let createError = require('http-errors');
@@ -9,6 +9,13 @@ let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
+
+//modules for authenticaion
+let session = require('express-session');
+let passport = require('passport');
+let passportLocal = require('passport-local');
+let localStrategy = passportLocal.Strategy;
+let flash = require('connect-flash');
 
 //mongo setup
 
@@ -40,6 +47,37 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
+
+//setup express session
+app.use(session({
+  secret: "SomeSecret",
+  saveUninitialized: false,
+  resave: false
+}));
+
+// flash initialize
+app.use(flash());
+
+//initialize passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+//setup user configuration passport
+
+//create user model instance
+let userModel = require('../models/user');
+//If non-functional change .Users to .User
+let User = userModel.Users;
+
+// implement user auth strategy
+passport.use(User.createStrategy());
+
+//serialize and deserialize Userinfo
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
